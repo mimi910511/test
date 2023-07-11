@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Box</title>
+    <style>
+        .tag{
+            color:black;font-weight:normal;text-decoration:none;
+        }
+        .tag-selected{
+            color:red;font-weight:bold;text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="page" onclick="changeToPage();" class="tag-selected">Page</span>
+        <span id="img" onclick="changeToImage();" class="tag">Image</span>
+        <span id="gpt" onclick="changeToGPT();" class="tag">GPT</span>
+    </div>
+    <div>
+        <input type="text"/>
+        <input id="btn" type="button" value="Page Search" />
+    </div>
+    <script>
+        let page=document.querySelector("#page");
+        let img=document.querySelector("#img");
+        let btn=document.querySelector("#btn");
+        function changeToGPT(){
+            page.className="tag";
+            img.className="tag";
+            gpt.className="tag-selected";
+            btn.value="Chat whit GPT";
+        }        
+        function changeToPage(){
+            page.className="tag-selected";
+            img.className="tag";
+            gpt.className="tag";
+            btn.value="Page Search";
+        }
+        function changeToImage(){
+            page.className="tag";
+            img.className="tag-selected";
+            gpt.className="tag";
+            btn.value="Image Search";
+        }
+    </script>
+</body>
+</html>
